@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset ="UTF-8">
+    <meta Name ="Viewport" content ="Width=device-width, initial-scale=1.0">
+    <title>College of Computer Science and Engineering National Quemoy University (NQU)- Registration Form </title>
+    <style>
+        Body {
+            Font-familia: Arial, sans-serif;
+            Display:  flex;
+            Justify-content: Center;
+            Align-items: Center;
+            Height: 120vh;
+            Background-color: white;
+            Flex-direction: column;
+        }
+        .Container {
+            Background: white;
+            Padding: 20px;
+            Border-radius: 10px;
+        }
+        Table {
+            Width: 100%;
+        }
+        Td {
+            Padding: 10px;
+        }
+        Input, Select, Textarea {
+          Width: 100%;
+          Padding: 8px;
+          Margin-top: 5px;
+          Border: 1px solid #ccc;
+          Border-radius: 4px;
+        }
+        Input[type="Submit"], Input[type="Reset"] {
+            Width: 100%;
+            Padding: 10px;
+            Color: white;
+            Border: none;
+            Border-radius: 4px;
+            Cursor: pointer;
+        }
+        Input[type="Submit"] {
+            Background-color: green;
+        }
+        Input[type="Reset"] {
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <H1>College of Computer Science and Engineering National Quemoy University (NQU)- Registration Form</H1>
+    <Div class="Container">
+        <form>
+            <table>
+                <TR> 
+                    <TD><label for ="fName">First Name:</label></TD>
+                    <TD><input type ="text" id ="fName" Name ="fName"></TD>
+                    <TD><label for ="lName">Last Name:</label></TD>
+                    <TD><input type ="text" id ="lName" Name ="lName"></TD>
+                </TR>
+
+                <TR>
+                    <TD><label for ="ID Number">ID Number</label></TD>
+                    <TD><input type ="text" id ="ID Number" Name ="ID Number"></TD>
+                </TR>
+
+                <TR>
+                    <TD><label for ="Birth">Date Of Birth</label></TD>
+                    <TD><input type ="Date" id ="Birth" Name ="Birth"></TD>
+                </TR>
+
+                <TR>
+                 <TD><label for ="Gender">Gender</label></TD>
+                    <TD><input type ="radio" id ="Man" Name ="gender" value ="Man">
+                        <label for ="Man">Man</label>
+                        <input type ="radio" id ="Woman" Name ="gender" value ="Woman">
+                        <label for ="Woman">Woman</label>
+                    </TD>
+                </TR>
+
+                <TR>
+                    <TD><label>Class</label></TD>
+                    <TD>
+                        <input type ="radio" id ="year 1" Name ="class" value ="year 1">
+                        <label for ="year 1">year 1</label>
+
+                        <input type ="radio" id ="year 2" Name ="class" value ="year 2">
+                        <label for="year 2">year 2</label>
+
+                        <input type ="radio" id ="year 3" Name ="class" value ="year 3">
+                        <label for="year 3">year 3</label>
+
+                        <input type ="radio" id ="year 4" Name ="class" value ="year 4">
+                        <label for ="year 4">year 4</label>
+                    </TD>
+                </TR>
+
+                <TR>
+                    <TD><label>Department</label></TD>
+                    <TD>
+                        <Select ID="Department" Name="Department">
+                            <option value ="ec">Electronic Engineering</option>
+                            <option value ="fs">Food Science</option>
+                            <option value ="ce">Civil Engineering</option>
+                            <option value ="cs">Computer Science</option>
+                        </Select>
+                    </TD>
+                </TR>
+
+                <TR>
+                    <TD><label for ="Address">Address</label></TD>
+                    <TD><textarea Name ="Address" rows ="2" cols ="50"></textarea></TD>
+                </TR>
+
+                <TR>
+                    <TD><label for ="Email">Email</label></TD>
+                    <TD><input type ="Email" id ="Email" name ="Email" required></TD>
+                </TR>
+
+                <TR>
+                    <TD><label for ="Addinfo">Additional</label></TD>
+                    <TD><input type ="file" id ="Addinfo" name ="Addinfo"></TD>
+                </TR>
+
+                <TR>
+                    <TD colspan ="2" style ="text-align: Center;">
+                        <br>
+                        <input type ="Submit" value ="Submit">
+                        <input type ="Reset" value ="Reset">
+                    </TD>
+                </TR>
+            </table>
+        </form>
+    </Div>
+</body>
+</html>
