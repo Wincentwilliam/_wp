@@ -7,7 +7,7 @@ function page(body) {
   <head>
   <style>
   body {
-    background-color: #336699;
+    background-color:rgb(255, 255, 255);
   }
   </style>
   </head>
