@@ -11,7 +11,7 @@ function page(body) {
   }
   </style>
   </head>
-  <body>de
+  <body>
   ${body}
   </body>
   </html>
