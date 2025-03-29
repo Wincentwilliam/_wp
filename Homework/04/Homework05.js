@@ -4,7 +4,7 @@ class Animal {
     }
 }
 
-class dog extends Animal {
+class Dog extends Animal {
     speak() {
         return `woof! I am ${this.name}`;
     }
