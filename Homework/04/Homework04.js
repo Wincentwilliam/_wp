@@ -4,7 +4,7 @@ function deepMerge(obj1,obj2) {
             obj2.hasOwnproperty(key)&&
             typeof obj2[key] === "object"&&
             obj2[key] !== null &&
-            !Array.isArray(obj2[key]);
+            !array.isArray(obj2[key]);
         ) {
             if (!obj1[key] || typeof obj1[key] !== "object") {
                 obj1[key] = {};
