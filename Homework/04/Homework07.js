@@ -7,7 +7,7 @@ class Vector {
             throw new Error("Vector must be of the same length");
         }
         const result = this.components.map((value, index) => value + other.components[index]);
-        return new vector(result);
+        return new Vector(result);
     }
 
     sub(other) {
