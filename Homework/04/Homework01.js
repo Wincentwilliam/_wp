@@ -12,7 +12,7 @@ function countletters(str) {
 }
 
 function describelettercount(Map) {
-    if (map.size === 0) return "I really don't see letter word here!";
+    if (Map.size === 0) return "I really don't see letter word here!";
 
     let message = "Here the letter is already breakdown and found:\n";
     for(const [letter, count]of Map) {
