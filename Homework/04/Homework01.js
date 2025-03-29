@@ -11,11 +11,11 @@ function countletters(str) {
     return letterMap;
 }
 
-function describelettercount(Map) {
-    if (Map.size === 0) return "I really don't see letter word here!";
+function describelettercount(letterMap) {
+    if (letterMap.size === 0) return "I really don't see letter word here!";
 
     let message = "Here the letter is already breakdown and found:\n";
-    for(const [letter, count]of Map) {
+    for(const [letter, count]of letterMap) {
         message += `- '${letter}' appears ${count} time${count > 1 ? 's': ''}.\n`;
     }
     return message;
