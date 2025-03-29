@@ -22,7 +22,7 @@ class Vector {
         if (this.components.length !== other.components.length) {
             throw new Error("Vectors must be of the same length");
         }
-        const result = this.components.reduce((sum, value, index) => sum + value * other.components[index], 0);
+       return this.components.reduce((sum, value, index) => sum + value * other.components[index], 0);
     }
 }
 
