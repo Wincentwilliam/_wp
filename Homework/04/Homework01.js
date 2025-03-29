@@ -1,5 +1,5 @@
 const countLetters = (x) => {
-    const Letter = new Map();
+    const Map = new Map();
     for(const char of x){
         Map.set(char, (Map.get(char) || 0) + 1);
     }
