@@ -1,4 +1,4 @@
-class vector {
+class Vector {
     constructor(components) {
         this.components = components;
     }
