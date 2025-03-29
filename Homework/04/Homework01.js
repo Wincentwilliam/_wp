@@ -2,7 +2,7 @@ function countletters(str) {
     const letterMap = new Map();
 
     for (const char of str){
-        if(/a-zA-Z/.test(char)) {
+        if(/[a-zA-Z]/.test(char)) {
             const lowerchar= char.tolowercase();
             letterMap.set(lowerchar, (letterMap.get(lowerchar) || 0) +1);
         }
@@ -22,3 +22,4 @@ function describelettercount(Map) {
 }
 
 console.log(countletters("banana")); //Map {'b' => 1, 'a' => 3, 'n' => 2}
+console.log(describelettercount(countletters("banana")));
