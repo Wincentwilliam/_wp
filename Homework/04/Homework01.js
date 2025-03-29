@@ -3,7 +3,7 @@ function countletters(str) {
 
     for (const char of str){
         if(/[a-zA-Z]/.test(char)) {
-            const lowerchar= char.tolowercase();
+            const lowerchar = char.tolowercase();
             letterMap.set(lowerchar, (letterMap.get(lowerchar) || 0) +1);
         }
     }
