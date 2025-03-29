@@ -1,17 +1,15 @@
 function deepMerge(obj1,obj2) {
     for(let key in obj2) {
         if(
-            obj2.hasOwnproperty(key) &&
-            typeof obj2[key] === "object" &&
-            obj2[key] !== null &&
-            !Array.isArray(obj2[key])
-        ) {
-            if (!obj1[key] || typeof obj1[key] !== "object") {
-                obj1[key] = {};
-            }
-            deepMerge(obj1[key], obj2[key]);
-        } else {
-            obj1[key] = obj2[key];
+            obj2.hasOwnproperty(key)) {
+                if(typeof obj2[key] === 'object' && obj2[key] !==null && !Array.isArray(obj2[key])) {
+                    if(!obj1[key] || typeof obj1[key] !== 'object' || Array.isArray(obj1[key])) {
+                        obj1[key] = {};
+                    }
+                    deepMerge(obj1[key], obj2[key]);
+                }else{
+                    ojb1[key] = obj2[key];
+                } 
         }
     }
     return obj1;
