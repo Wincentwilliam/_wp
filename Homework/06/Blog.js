@@ -11,9 +11,9 @@ db.query(`CREATE TABLE IF NOT EXISTS posts (
 `);
 
 const posts = [
-    {title:'aaa', body:'aaaaa'},
-    {title:'bbb', body:'bbbbb'},
-    {title:'ccc', body:'ccccc'}
+    {title:'My First Daily', body:'Just want to enjoy life'},
+    {title:'My Second Daily', body:'Want to make a people happy'},
+    {title:'My Third Daily', body:'Want to be a smart guy and inovate people'}
 ];
 
 // Run a simple query
