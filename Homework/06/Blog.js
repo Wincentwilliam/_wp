@@ -1,23 +1,28 @@
 import { DB } from "https://deno.land/x/sqlite/mod.ts";
 
-const db = new DB("Blog.DB");
-
-db.query( 'CREATE TABLE IF NOT EXISTS posts ( id INTEGER PRIMARY KEY AUTOINCREMENT,time DATETIME DEFAULT CURRENT_TIMESTAMP,title TEXT, body TEXT)') 
-
-const now = () => new Date().toISOString();
+// Open a database
+const db = new DB("blog.db");
+db.query(`CREATE TABLE IF NOT EXISTS posts (
+    id INTEGER PRIMARY KEY AUTOINCREMENT, 
+    time DATETIME DEFAULT CURRENT_TIMESTAMP,
+    title TEXT,
+    body TEXT
+    )
+`);
 
 const posts = [
-    ["The First Posts", "This is the first body."],
-    ["The Second Posts", "This is the second body."],
-    ["The Third Posts", "This is the third body."],
+    {title:'aaa', body:'aaaaa'},
+    {title:'bbb', body:'bbbbb'},
+    {title:'ccc', body:'ccccc'}
 ];
 
-for (const [title,body] of posts) {
-    db.query("INSERT INTO posts (Time, Title, Body) Values (?, ?, ?)",
-    [now(), title, body]
-    );
-}
+// Run a simple query
+for (const post of posts)
+  db.query("INSERT INTO posts (title, body) VALUES (?,?)", [post.title, post.body]);
 
-console.log("3 posts inserted using db.query()");
+// Print out data in table
+for (const [id, time, title, body] of db.query("SELECT id, time, title, body FROM posts"))
+  console.log(id, time, title, body);
 
+// Close connection
 db.close();
